@@ -1,4 +1,4 @@
-//Program to check Perfect Number
+//Program to check Strong Number
 
 #include<bits//stdc++.h>
 using namespace std;
