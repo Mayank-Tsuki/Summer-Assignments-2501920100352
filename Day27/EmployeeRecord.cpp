@@ -15,7 +15,7 @@ int main() {
     int choice;
 
     do {
-        cout << "\n===== Employee Record Management System =====\n";
+        cout << " : Employee Record Management System : ";
         cout << "1. Add Employee\n";
         cout << "2. Display All Employee\n";
         cout << "3. Search Employee by Employee_ID\n";
@@ -25,10 +25,10 @@ int main() {
 
         switch (choice) {
         case 1:
-            cout << "\nEnter Employee_ID: ";
+            cout << "Enter Employee_ID: ";
             cin >> s[n].Employee_ID;
 
-            cin.ignore();   // Ignore newline left by cin
+            cin.ignore();  
             cout << "Enter Name: ";
             getline(cin, s[n].Name);
 
@@ -36,14 +36,14 @@ int main() {
             cin >> s[n].Department;
 
             n++;
-            cout << "Employee record added successfully!\n";
+            cout << "Employee record added successfully!"<<endl;
             break;
 
         case 2:
             if (n == 0) {
-                cout << "No records found!\n";
+                cout << "No records found!"<<endl;
             } else {
-                cout << "\nEmployee Records:\n";
+                cout << "Employee Records:";
                 for (int i = 0; i < n; i++) {
                     cout << "\nEmployee " << i + 1 << endl;
                     cout << "Employee_ID: " << s[i].Employee_ID << endl;
@@ -63,7 +63,7 @@ int main() {
 
             for (int i = 0; i < n; i++) {
                 if (s[i].Employee_ID == Employee_ID) {
-                    cout << "\nRecord Found:\n";
+                    cout << "Record Found:";
                     cout << "Employee_ID: " << s[i].Employee_ID << endl;
                     cout << "Name   : " << s[i].Name << endl;
                     cout << "Department  : " << s[i].Department << endl;
@@ -73,17 +73,17 @@ int main() {
             }
 
             if (!found) {
-                cout << "Employee record not found!\n";
+                cout << "Employee record not found!"<<endl;
             }
             break;
         }
 
         case 4:
-            cout << "Exiting program...\n";
+            cout << "Exiting program..."<<endl;
             break;
 
         default:
-            cout << "Invalid choice!\n";
+            cout << "Invalid choice!"<<endl;
         }
 
     } while (choice>=1 && choice<4);
