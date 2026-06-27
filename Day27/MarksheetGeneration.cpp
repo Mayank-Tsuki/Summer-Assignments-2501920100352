@@ -44,7 +44,7 @@ int main() {
     else
         grade = 'F';
 
-    cout << "========== MARKSHEET ==========";
+    cout << " :Student MARKSHEET :";
     cout << "Student Name : " << name << endl;
     cout << "Roll Number  : " << rollNo << endl;
 
