@@ -15,7 +15,7 @@ int main() {
     int choice;
 
     do {
-        cout << "===== Student Record Management System =====";
+        cout << " : Student Record Management System : ";
         cout << "1. Add Student\n";
         cout << "2. Display All Students\n";
         cout << "3. Search Student by Roll Number\n";
@@ -28,7 +28,7 @@ int main() {
             cout << "\nEnter Roll Number: ";
             cin >> s[n].rollNo;
 
-            cin.ignore();   // Ignore newline left by cin
+            cin.ignore();
             cout << "Enter Name: ";
             getline(cin, s[n].name);
 
@@ -36,16 +36,16 @@ int main() {
             cin >> s[n].marks;
 
             n++;
-            cout << "Student record added successfully!\n";
+            cout << "Student record added successfully!"<<endl;
             break;
 
         case 2:
             if (n == 0) {
                 cout << "No records found!\n";
             } else {
-                cout << "\nStudent Records:\n";
+                cout << "Student Records:";
                 for (int i = 0; i < n; i++) {
-                    cout << "\nStudent " << i + 1 << endl;
+                    cout << "Student " << i + 1 << endl;
                     cout << "Roll No: " << s[i].rollNo << endl;
                     cout << "Name    : " << s[i].name << endl;
                     cout << "Marks   : " << s[i].marks << endl;
@@ -73,17 +73,17 @@ int main() {
             }
 
             if (!found) {
-                cout << "Student record not found!\n";
+                cout << "Student record not found!"<<endl;
             }
             break;
         }
 
         case 4:
-            cout << "..Thank you..\n";
+            cout << "..Thank you.."<<endl;
             break;
 
         default:
-            cout << "Invalid choice!\n";
+            cout << "Invalid choice!"<<endl;
         }
 
     } while (choice>=1 && choice<4);
